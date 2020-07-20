@@ -37,6 +37,16 @@ class _HomePageState extends State<HomePage> {
           "Em caso de elementos de segurança do tipo CAPTCHA, a tela oferece recursos de acessibilidade para o usuário contornar o elemento.",
       "check": false
     },
+    {
+      "nome":
+      "Em caso de existência de elemento(s) que não possui(am) sentido ao usuário, este(s) é(são) ignorado(s) pela tecnologia assistiva. ",
+      "check": false
+    },
+    {
+      "nome":
+      "Para todo o conteúdo de mídia visual pré-ravada, há uma descrição detalhada, em forma de texto ou áudio, que transmite todos os detalhes da mídia - como ações, movimentos, e expressões dos agentes apresentados no conteúdo visual - de modo que o deficiente visual tenha acesso às informações necessárias para entender a mídia.  ",
+      "check": false
+    },
   ];
 
   @override
@@ -63,6 +73,9 @@ class _HomePageState extends State<HomePage> {
                         "Este item ${itens[index]["check"] ? "" : " não"} está implementado",
                       ),
                       value: itens[index]["check"],
+                      secondary: CircleAvatar(
+                        child: Icon(itens[index]["check"] ? Icons.check : Icons.error),
+                      ),
                       onChanged: (newValue) {
                         setState(() {
                           itens[index]["check"] = newValue;
