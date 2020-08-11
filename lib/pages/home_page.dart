@@ -8,6 +8,8 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
+
+
 final itens = <Map>[
   {
     "nome":
@@ -67,6 +69,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final scaleFactor = MediaQuery.of(context).textScaleFactor;
     return Scaffold( //construtor do leyalt do app
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -83,9 +86,9 @@ class _HomePageState extends State<HomePage> {
               accountName: Text("Victor Maranholi"),//Menu de navegação
               accountEmail: Text("victor_maranholi@ufmt.br"),//Menu de navegação
               currentAccountPicture: CircleAvatar(//imagem do avatar do aplicativo (foto pessoa)
-                backgroundImage: AssetImage(" "),
+                backgroundImage: AssetImage("assets/images/eu.jpg"),
               ), //Menu de navegação
-              decoration: BoxDecoration(color: Colors.deepOrange),//Menu de navegação
+              decoration: BoxDecoration(color: Color(0xFFe64a19)),//Menu de navegação
             ),
             ListTile(
               leading: Icon(Icons.home),
@@ -127,7 +130,9 @@ class _HomePageState extends State<HomePage> {
                 itemCount: itens.length,
                 itemBuilder: (context, index) {
                   return CheckboxListTile(
-                    title: Text(itens[index]["nome"]),
+                    title: Text(itens[index]["nome"],
+                        style: TextStyle(fontSize: 20 * scaleFactor) // escalonagem do tamanho da fonte de acordo com as configurações do usuário
+                    ),
                     subtitle: Text(
                       "Este item ${itens[index]["check"] ? "" : " não"} está implementado",
                     ),
