@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lavi_check/pages/sobre.dart';
+import 'package:lavi_check/pages/item1.dart';
 import 'Dart:io';
 
 class HomePage extends StatefulWidget {
@@ -8,27 +9,25 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-
-
 final itens = <Map>[
   {
     "nome":
-        "Os botões/caixa(s) de texto/imagens de links, ou qualquer outro elemento de entrada/controle de dados, está(ão) devidamente referenciado(s).",
+        "Refrerenciar botões e caixa de testo, links ou elementos de entrada/controle.",
     "check": false
   },
   {
     "nome":
-        "Se há arquivo(s) de áudio e/ou vídeo na tela, este(s) possue(em) alternativa(s) em texto com descrição completa do conteúdo da(s) mídia(s).",
+        "Arquivo(s) de áudio e/ou vídeo possui(em) descrição do que se trata(m) e do conteúdo da(s) mídia(s).",
     "check": false
   },
   {
     "nome":
-        "Se há arquivo(s) de áudio e/ou vídeo na tela, este(s) possue(em) alternativa(s) em texto com descrição completa do conteúdo da(s) mídia(s).",
+        "Indicar, através de elementos semânticos, alternativa escrita da mídia existente.",
     "check": false
   },
   {
     "nome":
-        "Há elemento(s) na tela que não pode(em) ter seu(s) conteúdo(s) em formato de texto, como testes e exercícios, mas possue(em) descrição da finalidade do conteúdo.",
+        "Elemento(s) na tela que não pode(em) ter seu(s) conteúdo(s) em formato de texto, como testes e exercícios, possue(em) descrição da finalidade do conteúdo.",
     "check": false
   },
   {
@@ -51,6 +50,16 @@ final itens = <Map>[
         "Todo o conteúdo de mídia visual pré-ravada possui uma descrição detalhada, em forma de texto ou áudio, que transmite todos os detalhes da mídia - como ações, movimentos, e expressões dos agentes apresentados no conteúdo visual - de modo que o deficiente visual tenha acesso às informações necessárias para entender a mídia.  ",
     "check": false
   },
+  {
+    "nome":
+        "As informações existentes na tela do aplicativo estão organizadas, no código, de modo  os leitores de tela expressem as informações sem causar confusão ao usuáririo.",
+    "check": false
+  },
+  {
+    "nome":
+        "Informações implícitas (negritos, itálico, coloração diferenciada, hiperlink) devem ser sinalizadas em froma de texto.",
+    "check": false
+  }
 ];
 
 class _HomePageState extends State<HomePage> {
@@ -83,8 +92,14 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           children: <Widget>[
             UserAccountsDrawerHeader( //Menu de navegação
-              accountName: Text("Victor Maranholi"),//Menu de navegação
-              accountEmail: Text("victor_maranholi@ufmt.br"),//Menu de navegação
+              accountName: Text(
+                  "Victor Maranholi",
+                  style: TextStyle(fontSize: 20 * scaleFactor),
+              ),//Menu de navegação
+              accountEmail: Text(
+                  "victor_maranholi@ufmt.br",
+                  style: TextStyle(fontSize: 20 * scaleFactor),
+              ),//Menu de navegação
               currentAccountPicture: CircleAvatar(//imagem do avatar do aplicativo (foto pessoa)
                 backgroundImage: AssetImage("assets/images/eu.jpg"),
               ), //Menu de navegação
@@ -92,7 +107,10 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.home),
-              title: Text("Início"),
+              title: Text(
+                  "Início",
+                  style: TextStyle(fontSize: 20 * scaleFactor),
+              ),
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => HomePage()));
                 tooltip: "Início do aplicativo";
@@ -100,21 +118,38 @@ class _HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.history),
-              title: Text("Sobre o LAVI"),
+              title: Text(
+                  "Sobre o LAVI",
+                  style: TextStyle(fontSize: 20 * scaleFactor),
+              ),
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Sobre()));
                 tooltip: "Sobre o LAVI";
               },
             ),
+            ListTile(
+              leading: Icon(Icons.history),
+              title: Text(
+                "Item 1 ",
+                style: TextStyle(fontSize: 20 * scaleFactor),
+              ),
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Item1()));
+                tooltip: "Item1";
+              },
+            ),
             ListTile( //botão de sair  no menu de nagecação
               leading: Icon(Icons.exit_to_app),
-              title: Text("Sair"),
+              title: Text(
+                  "Sair",
+                  style: TextStyle(fontSize: 20 * scaleFactor),
+              ),
 
               onTap: (){
                 SystemNavigator.pop();
                 semanticLabel: 'Sair do Aplicativo';
               },
-            )
+            ),
           ],
         ),
       ),//Fim Menu de navegação
@@ -139,7 +174,7 @@ class _HomePageState extends State<HomePage> {
                     value: itens[index]["check"],
                     secondary: CircleAvatar(
                       child: Icon(
-                          itens[index]["check"] ? Icons.check : Icons.error),
+                          itens[index]["check"] ? Icons.check : Icons.error),//ícone lateral esquerdo dos checklist
                     ),
                     onChanged: (newValue) {
                       setState(() {
