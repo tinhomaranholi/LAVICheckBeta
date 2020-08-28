@@ -64,7 +64,7 @@ List<MinhaLista> ListaDeItens = <MinhaLista>[
     <MinhaLista>[MinhaLista('Descrição de item')],
   ),
   MinhaLista(
-    'Todo(s) o(s) arquivo(s) de áudio e/ou vídeo possui(em) descrição do(s) conteúdo(s) apresentado na mídia.',
+    'Todo(s) o(s) arquivo(s) de áudio e/ou vídeo devem possui(em) descrição do(s) conteúdo(s) apresentado na mídia.',
     <MinhaLista>[
       MinhaLista(
           'Descreva, em formato de texto, o conteúdo midiático exibido em seu aplicativo.'
@@ -82,7 +82,7 @@ List<MinhaLista> ListaDeItens = <MinhaLista>[
     ],
   ),
   MinhaLista(
-    'Descreva a finalidade de conteúdo(s) existente(S) que não possa(m) ser transcrito(s).',
+    'Descreva a finalidade de conteúdo(s) existente(s) que não possa(m) ser transcrito(s).',
     <MinhaLista>[
       MinhaLista(
           'Caso seja adicionado ao aplicativo algum conteúdo que não pode ser transcrito, adicione informações semânticas que descrevam a finalidade do item.'
