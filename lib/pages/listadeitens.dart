@@ -130,11 +130,26 @@ List<MinhaLista> ListaDeItens = <MinhaLista>[
     ],
   ),
   MinhaLista(
-    'Escolha a palea te cores de seu aplicativo. ',
+    'Escolha a paleta te cores de seu aplicativo. ',
     <MinhaLista>[
       MinhaLista(
         'Cuide para que as cores que serão usadas em seu aplicativo estejam dentro dos padrões indicados pela W3C, considerando a relação de constraste nas fontes, para'
         ' que usuários que tenham algum tipo de daltonismo não sofram ao utilizarem seu aplicativo. ',
+      ),
+    ],
+  ),
+  MinhaLista(
+    'Crie versões alternativas para nevação por leitores de tela',
+    <MinhaLista>[
+      MinhaLista(
+        'Caso a estrutura do aplicativo influencie as informações da aplicação, organize-as de modo adaptado para leiores de tela. '
+        'No código do programa, organize as estruturas de relações utilizando ferramentas para indicar listas, propagandas, links, etc'
+        'Para fazer isso, pode-se utilizar a estrutura semântica apresentada acima, e uma frase indicativa do conteúdo que será exibido, por exemplo: '
+        'semanticLabel: "uma lista de hiperlinks será apresentada."'
+        'semanticLabel: "uma propaganda sobre (x) está sendo exibida. "',
+      ),
+      MinhaLista(
+        'novo item',
       ),
     ],
   ),
