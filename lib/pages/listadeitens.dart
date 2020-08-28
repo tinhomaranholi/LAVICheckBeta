@@ -130,7 +130,7 @@ List<MinhaLista> ListaDeItens = <MinhaLista>[
     ],
   ),
   MinhaLista(
-    'Escolha a paleta te cores de seu aplicativo. ',
+    'Escolha adequadamente a paleta de cores de seu aplicativo. ',
     <MinhaLista>[
       MinhaLista(
         'Cuide para que as cores que serão usadas em seu aplicativo estejam dentro dos padrões indicados pela W3C, considerando a relação de constraste nas fontes, para'
