@@ -33,15 +33,15 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             UserAccountsDrawerHeader( //Menu de navegação
               accountName: Text(
-                  "Victor Maranholi",
+                  "LAVI IC/UFMT",
                   style: TextStyle(fontSize: 20 * scaleFactor),
               ),//Menu de navegação
               accountEmail: Text(
-                  "victor_maranholi@ufmt.br",
+                  "www.ic.ufmt.br",
                   style: TextStyle(fontSize: 20 * scaleFactor),
               ),//Menu de navegação
               currentAccountPicture: CircleAvatar(//imagem do avatar do aplicativo (foto pessoa)
-                backgroundImage: AssetImage("assets/images/eu.jpg"),
+                backgroundImage: AssetImage("assets/images/lavi_logo.png"),
               ), //Menu de navegação
               decoration: BoxDecoration(color: Color(0xFFe64a19)),//Menu de navegação
             ),
