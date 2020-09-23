@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(fontSize: 20 * scaleFactor),
               ),//Menu de navegação
               accountEmail: Text(
-                  "www.ic.ufmt.br",
+                  "www.ic.ufmt.br/lavi",
                   style: TextStyle(fontSize: 20 * scaleFactor),
               ),//Menu de navegação
               currentAccountPicture: CircleAvatar(//imagem do avatar do aplicativo (foto pessoa)
